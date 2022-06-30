@@ -1,0 +1,70 @@
+/* hero */
+
+.hero {
+  text-align: center;
+  padding: 118px 60px;
+
+  &__title {
+    color: var(--primary-white-color);
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-align: center;
+    max-width: 360px;
+    height: 84px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+      height: 120px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+  &__overlay {
+    max-width: 1600px;
+    outline: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/overlay-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/overlay-2.jpg);
+    }
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/overlay.jpg);
+    }
+  }
+}
+.button {
+  display: block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+
+  border-color: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.06em;
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+  }
+}

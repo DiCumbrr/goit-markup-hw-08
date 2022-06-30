@@ -1,0 +1,110 @@
+/* features */
+.feature {
+  background-color: #f5f4fa;
+  padding-bottom: 94px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    // margin-left: -30px;
+    // text-align: center;
+  }
+
+  &__item {
+    width: 100%;
+    // margin-left: 30px;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 120px) / 4);
+    }
+  }
+
+  &__title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+}
+
+.feature-communication {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  &__item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #afb1b8;
+    position: relative;
+  }
+
+  &__icon {
+    fill: currentColor;
+    position: absolute;
+    transform: rotate(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transform: rotate(360deg);
+    transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // @media screen and (min-width: 1200px) {
+  //   padding-top: 94px;
+  //   padding-bottom: 94px;
+  // }
+}
+.section-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}

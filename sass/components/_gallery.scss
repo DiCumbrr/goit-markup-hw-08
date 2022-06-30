@@ -1,0 +1,38 @@
+.gallery {
+  padding-top: 0;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #ffffff;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    bottom: 0;
+  }
+}
