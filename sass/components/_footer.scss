@@ -7,21 +7,28 @@
   padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     &__contact {
       display: inline-flex;
       margin-left: auto;
       margin-right: auto;
     }
   }
+  @media screen and (min-width: 1200px) {
+    &__contact {
+      margin-right: 60px;
+    }
+  }
+}
+.contact-wrap {
+  width: 1200px;
+  margin: 0 auto;
 }
 .contact-wrap .container {
   display: block;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-  }
-  @media screen and (min-width: 1200px) {
   }
 }
 
