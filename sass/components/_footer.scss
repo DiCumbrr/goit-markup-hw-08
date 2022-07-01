@@ -1,14 +1,46 @@
 // footer___________
 
 .footer-adress {
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--primary-grey-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    &__contact {
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 .contact-wrap .container {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    align-items: flex-start;
+    display: inline-flex;
+  }
+}
+
 .logo-footer {
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -20,7 +52,15 @@
   height: 31px;
 }
 .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
   &__item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -30,6 +70,9 @@
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-style: normal;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__text {
     color: var(--primary-white-color);
@@ -40,19 +83,51 @@
 }
 
 .social-contacts {
-  margin-right: auto;
-  &__wrapper {
-    margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: baseline;
+      margin-bottom: 50px;
+    }
   }
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+    &__wrapper {
+      margin-left: 70px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: inline-flex;
+      justify-content: flex-start;
+      padding-top: 20px;
+      &__wrapper {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__title {
-    display: block;
     color: var(--primary-white-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
+    margin-top: 60px;
     margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
   }
   &__list {
     display: flex;
@@ -94,26 +169,46 @@
   }
 }
 .footer-email__title {
-  display: block;
   color: var(--primary-white-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
+  margin-top: 60px;
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-left: 170px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 20px;
+  }
 }
 .form {
   &__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 768px) {
+      margin-left: 166px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-left: 0;
+    }
   }
   &__input {
     background-color: #2f303a;
     color: rgba(255, 255, 255, 0.6);
-
-    width: 358px;
+    width: 450px;
     height: 50px;
 
     font-size: 16px;
@@ -126,7 +221,11 @@
     outline: none;
 
     padding: 15px 16px;
+    margin-bottom: 20px;
     margin-right: 12px;
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
   }
   &__btn {
     display: flex;
