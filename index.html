@@ -60,6 +60,21 @@
           </ul>
         </div>
       </div>
+      <button type="button" class="menu__close-btn toggle-btn" aria-expanded="false" toggle-btn>
+        <svg
+          class="menu__close-icon"
+          width="40"
+          height="40"
+          aria-label="Переключатель мобильного меню"
+        >
+          <use
+            class="menu__icon-cross"
+            href="./images/symbol-defs.svg#icon-menu-close"
+            data-menu-close
+          ></use>
+          <use class="menu__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button>
     </header>
 
     <main>
@@ -497,6 +512,44 @@
         </form>
       </div>
     </div>
+    <!-- Бургер меню -->
+    <div class="menu is-hidden" data-menu>
+      <form class="menu__form">
+        <div class="menu__box-1">
+          <nav class="menu__nav">
+            <ul class="menu__list list">
+              <li class="menu__item"><a href="" class="menu__link current">Студия</a></li>
+              <li class="menu__item">
+                <a href="./portfolio.html" class="menu__link">Портфолио</a>
+              </li>
+              <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu__box-2">
+          <div class="menu__wrapper">
+            <ul class="menu-contacts list">
+              <li class="menu-contacts__item">
+                <a href="tel:+380991111111" class="menu-contacts__link-phone"> +38 096 111 11 11</a>
+              </li>
+              <li class="menu-contacts__item">
+                <a href="mailto:info@devstudio.com" class="menu-contacts__link-mail">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="menu__wrapper">
+            <ul class="menu-soc list">
+              <li class="menu-soc__item"><a href="" class="menu-soc__link">Instagram</a></li>
+              <li class="menu-soc__item"><a href="" class="menu-soc__link">Twitter</a></li>
+              <li class="menu-soc__item"><a href="" class="menu-soc__link">Facebook</a></li>
+              <li class="menu-soc__item"><a href="" class="menu-soc__link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
     <script src="./js/modal.js">
       (() => {
         const refs = {
@@ -515,23 +568,6 @@
       }
       })();
     </script>
-    <script src="./js/menu.js">
-            (() => {
-        const refs = {
-          openMenuBtn: document.querySelector('[data-menu-open]'),
-          closeMenuBtn: document.querySelector('[data-menu-close]'),
-          menu: document.querySelector('[data-menu]'),
-          body: document.querySelector('body'),
-        };
-
-        refs.openMenuBtn.addEventListener('click', toggleMenu);
-        refs.closeMenuBtn.addEventListener('click', toggleMenu);
-
-        function toggleMenu() {
-          refs.menu.classList.toggle('is-hidden');
-          refs.body.classList.toggle('no-scroll');
-        }
-      })();
-    </script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

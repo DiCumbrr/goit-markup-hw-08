@@ -1,0 +1,136 @@
+.menu {
+  position: absolute;
+  top: 0;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  height: 100%;
+  width: 100vw;
+  padding: 48px 40px;
+}
+.menu.is-hidden {
+  visibility: hidden;
+}
+.menu.is-open {
+  visibility: visible;
+}
+.menu__close-btn {
+  position: absolute;
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+  border: transparent;
+  display: inline-flex;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  top: 22px;
+  right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .menu__close-btn {
+    display: none;
+  }
+}
+.menu__close-btn.is-open {
+  top: 10px;
+}
+.menu__close-btn:hover .menu__icon-menu,
+.menu__close-btn:focus .menu__icon-menu {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
+.menu__close-btn:hover .menu__icon-cross,
+.menu__close-btn:focus .menu__icon-cross {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
+.menu__close-btn .menu__icon-menu {
+  display: block;
+}
+
+.menu__close-btn .menu__icon-cross {
+  display: none;
+}
+
+.menu__close-btn.is-open .menu__icon-cross {
+  display: block;
+}
+
+.menu__close-btn.is-open .menu__icon-menu {
+  display: none;
+}
+
+.menu__box-1 {
+  position: absolute;
+  top: 40px;
+}
+
+.menu__box-2 {
+  position: absolute;
+  bottom: 40px;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu__link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.current {
+  color: var(--accent-color);
+}
+
+.menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-contacts__link-phone {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.menu-contacts__link-mail {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+// .menu-soc {
+// }
+.menu-soc {
+  display: flex;
+  align-items: center;
+
+  margin-top: 64px;
+}
+
+.menu-soc__item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.menu-soc__item:not(:last-child) {
+  padding-right: 10px;
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-soc__link {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
