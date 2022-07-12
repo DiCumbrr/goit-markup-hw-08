@@ -1,12 +1,16 @@
 .menu {
   position: absolute;
   top: 0;
+  bottom: 0;
   background-color: var(--primary-white-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
   height: 100%;
-  width: 100vw;
+  width: 100%;
   padding: 48px 40px;
+  @media screen and (max-width: 479px) {
+    max-width: 320px;
+  }
 }
 .menu.is-hidden {
   visibility: hidden;
@@ -99,6 +103,7 @@
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+
 .menu-contacts__link-mail {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -106,9 +111,9 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
+  width: 100%;
 }
-// .menu-soc {
-// }
+
 .menu-soc {
   display: flex;
   align-items: center;

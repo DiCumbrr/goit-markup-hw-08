@@ -17,6 +17,12 @@
     margin-right: auto;
     margin-bottom: 30px;
     text-transform: uppercase;
+    @media screen and (max-width: 479px) {
+      max-width: 380px;
+      height: 120px;
+      font-size: 23px;
+      line-height: 1.36;
+    }
     @media screen and (min-width: 1200px) {
       max-width: 696px;
       height: 120px;
@@ -25,7 +31,7 @@
     }
   }
   &__overlay {
-    width: 480px;
+    max-width: vw;
     outline: 1px solid #000;
     margin-left: auto;
     margin-right: auto;
@@ -68,5 +74,10 @@
   &:hover,
   &:focus {
     color: var(--primary-white-color);
+  }
+  @media screen and (max-width: 479px) {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 1.25;
   }
 }

@@ -171,7 +171,18 @@
 
           <ul class="feature__list list">
             <li class="feature__item">
-              <img src="./images/icon.jpg" alt="Персонал" width="270" />
+              <picture
+                ><source
+                  srcset="./images/icon.jpg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 120px) 270px, 100vw" />
+
+                <source
+                  srcset="./images/icon-2x.jpg"
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 100vw" />
+                <img src="./images/icon-3x.jpg" alt="Персонал" width="450"
+              /></picture>
               <h3 class="feature__title">Игорь Демьяненко</h3>
               <p class="feature__text">Product Designer</p>
               <ul class="feature-communication list">
@@ -207,7 +218,18 @@
             </li>
 
             <li class="feature__item">
-              <img src="./images/icon.1.jpg" alt="Персонал" width="270" />
+              <picture
+                ><source
+                  srcset="./images/icon.1.jpg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 120px) 270px, 100vw" />
+
+                <source
+                  srcset="./images/icon.1-2x.jpg"
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 100vw" />
+                <img src="./images/icon.1-3x.jpg" alt="Персонал" width="450"
+              /></picture>
               <h3 class="feature__title">Ольга Репина</h3>
               <p class="feature__text">Frontend Developer</p>
               <ul class="feature-communication list">
@@ -243,7 +265,18 @@
             </li>
 
             <li class="feature__item">
-              <img src="./images/icon.2.jpg" alt="Персонал" width="270" />
+              <picture
+                ><source
+                  srcset="./images/icon.2.jpg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 120px) 270px, 100vw" />
+
+                <source
+                  srcset="./images/icon.2-2x.jpg"
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 100vw" />
+                <img src="./images/icon.2-3x.jpg" alt="Персонал" width="450"
+              /></picture>
               <h3 class="feature__title">Николай Тарасов</h3>
               <p class="feature__text">Marketing</p>
               <ul class="feature-communication list">
@@ -279,7 +312,18 @@
             </li>
 
             <li class="feature__item">
-              <img src="./images/icon.3.jpg" alt="Персонал" width="270" />
+              <picture>
+                <source
+                  srcset="./images/icon.3.jpg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 120px) 270px, 100vw" />
+
+                <source
+                  srcset="./images/icon.3-2x.jpg"
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 100vw" />
+                <img src="./images/icon.3-3x.jpg" alt="Персонал" width="450"
+              /></picture>
               <h3 class="feature__title">Михаил Ермаков</h3>
               <p class="feature__text">UI Designer</p>
               <ul class="feature-communication list">
@@ -366,7 +410,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
     </main>
 
     <!-- Футер -->
@@ -451,10 +495,10 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> 
 
     <!-- Модальное окно -->
-    <div class="backdrop is-hidden" data-modal>
+     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-btn" data-modal-close>
           <svg class="modal__close-icon" width="11" height="11">
@@ -511,7 +555,7 @@
           <button type="submit" class="modal__btn">Отправить</button>
         </form>
       </div>
-    </div>
+    </div> 
     <!-- Бургер меню -->
     <div class="menu is-hidden" data-menu>
       <form class="menu__form">
@@ -550,6 +594,7 @@
         </div>
       </form>
     </div>
+
     <script src="./js/modal.js">
       (() => {
         const refs = {
